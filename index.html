@@ -18,14 +18,265 @@
     </a>
     <nav>
       <ul class="nav">
-        <a class="nav__item active" href="#">Characters</a>
+        <a class="nav__item active" href=".">Characters</a>
         <a class="nav__item" href="./locations.html">Locations</a>
         <a class="nav__item" href="./episodes.html">Episodes</a>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="container"></div>
+    <div class="container">
+      <div class="search-container">
+        <div class="input-container"> 
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Filter by name">
+        </div>
+        <div class="wrapper">
+          <div class="select-container">
+            <input type="checkbox">
+            <span class="selected-value">Specie</span>
+            <div class="chevrons">
+              <i class="fa-solid fa-chevron-up"></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        
+          <ul class="options">
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="alien"
+                data-label="Alien"
+              >
+              <span>Alien</span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="animal"
+                data-label="Animal"
+              >
+              <span>Animal</span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="cronenberg"
+                data-label="Cronenberg"
+              >
+              <span>Cronenberg
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="disease"
+                data-label="Disease"
+              >
+              <span>Disease
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="human"
+                data-label="Human"
+              >
+              <span>Human
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="humanoid"
+                data-label="Humanoid
+                "
+              >
+              <span>Humanoid
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="mythical creature"
+                data-label="Mythical Creature"
+              >
+              <span>Mythical Creature
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="parasite"
+                data-label="Parasite"
+              >
+              <span>Parasite
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="poopybutthole"
+                data-label="Poopybutthole"
+              >
+              <span>Poopybutthole
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="robot"
+                data-label="Robot"
+              >
+              <span>Robot
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="vampire"
+                data-label="Vampire"
+              >
+              <span>Vampire
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="unknown"
+                data-label="Unknown"
+              >
+              <span>Unknown
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="wrapper">
+          <div class="select-container">
+            <input type="checkbox">
+            <span class="selected-value">Genre</span>
+            <div class="chevrons">
+              <i class="fa-solid fa-chevron-up"></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        
+          <ul class="options">
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="male"
+                data-label="Male"
+              >
+              <span>Male</span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="female"
+                data-label="Female"
+              >
+              <span>Female</span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="genderless"
+                data-label="Genderless"
+              >
+              <span>Genderless
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="unknown"
+                data-label="Unknown"
+              >
+              <span>Unknown
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="wrapper">
+          <div class="select-container">
+            <input type="checkbox">
+            <span class="selected-value">Genre</span>
+            <div class="chevrons">
+              <i class="fa-solid fa-chevron-up"></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        
+          <ul class="options">
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="alive"
+                data-label="Alive"
+              >
+              <span>Alive</span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="dead"
+                data-label="Dead"
+              >
+              <span>Dead
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="option">
+              <input 
+                type="radio"
+                name="category"
+                value="unknown"
+                data-label="Unknown"
+              >
+              <span>Unknown
+              </span>
+              <i class="fa-solid fa-check"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="atributtions">

@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+
+header {
+  @include flex-center;
+  height: 15%;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  width: 100%;
+
+  .logo {
+    @include flex-center;
+    gap: 2rem;
+
+    &__image {
+      transition: $short;
+      width: 80px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__title {
+      font-size: 38px;
+      transition: $short;
+      
+      &:hover {
+        text-shadow: -4px 0px 0 $cyan;
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  
+  &__item {
+    border-bottom: 2px solid transparent;
+    color: $black; 
+    font-weight: bold;
+    transition: $short;
+
+    &:hover,
+    &.active {
+      border-color: $cyan;
+      color: $green;
+      transform: translateY(-5px)
+    }
+  }
+}

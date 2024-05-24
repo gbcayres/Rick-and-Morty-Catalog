@@ -1,0 +1,120 @@
+@use "../abstracts" as *;
+
+.wrapper {
+  width: 20%;
+  position: relative;
+}
+
+.select-container {
+  align-items: center;
+  background-color: $white;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+  transition: $medium;
+  width: 100%;
+
+  input {
+    all: unset;
+    cursor: pointer;
+    inset: 0;
+    position: absolute;
+  }
+
+  &:has(input:checked), &:hover {
+    border: 1px solid $cyan;
+  }
+
+  .fa-chevron-up {
+    display: none;
+  }
+
+  &:has(input:checked) {
+    .fa-chevron-down {
+      display: none;
+    }
+
+    .fa-chevron-up {
+      display: block;
+      color: $green;
+    }
+   }
+
+  &:has(input:checked) + .options {
+    opacity: 1;
+    max-height: 500px
+  }
+}
+
+.selected-value {
+  color: #AFABB6;
+  font-size: 0.875rem;
+  letter-spacing: 0.02625rem;
+}
+
+.chevrons {
+  font-size: 0.7rem;
+  color: $grey;
+}
+
+.options {
+  margin-top: 0.35rem;
+  background-color: $white;
+  border: 1px solid $cyan;
+  border-radius: 1rem;
+  position: absolute;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: $medium;
+}
+
+.option {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  position: relative;
+  transition: 0.3s all;
+  font-size: 0.875rem;
+  letter-spacing: 0.02625rem;
+
+  span {
+    color: $black;
+    transition: $short;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $cyan;
+  }
+
+  &:has(input:focus) {
+    i {
+      display: block;
+    }
+  }
+
+  &:hover, &:has(input:focus) {
+    span {
+      color: $green;
+      
+    }
+  }
+
+  input {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+
+  i {
+    display: none;
+    color: $green;
+    transition: $short;
+  }
+}

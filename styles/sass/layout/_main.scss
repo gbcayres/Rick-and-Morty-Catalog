@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+main {
+  @include flex-center;
+  background-image: url("./../../assets/images/rickandmortybackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85%;
+}
+
+.container {
+  background-color: rgba($white, $alpha: 0.4);
+  backdrop-filter: blur(1rem);
+  background-position: center;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba($black, $alpha: 0.5);
+  height: 90%;
+  max-width: 900px;
+  overflow: hidden;
+  width: 100%;
+}

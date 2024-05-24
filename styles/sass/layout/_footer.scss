@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+footer {
+  @include flex-center;  
+  background-color: rgb(26, 26, 26);
+  background-image: url("./../../assets/images/WUBBALUBBADUBDUB.png");
+  background-size: contain;
+  background-position: right;
+  color: white;
+  flex-direction: column;
+  height: 15%;
+  width: 100%;
+
+  .atributtions {
+    @include flex-center;
+    background-color: rgba($black, $alpha: 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 3rem;
+    flex-direction: column;
+    font-size: 0.9rem;
+    max-width: 350px;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  a {
+    color: $cyan;
+    font-weight: bold;
+    transition: 0.5s all;
+
+    &:hover {
+      color: $green;
+      letter-spacing: 1px;
+    }
+  }
+}
