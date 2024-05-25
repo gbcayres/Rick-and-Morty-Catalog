@@ -6,14 +6,15 @@
   <link rel="icon" type="image/x-icon" href="./assets/images/redLogo.png">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="script" defer href="./js/main.js">
+  <meta name="description" content="You can find every character detail, location, episodes and more about Rick and Morty universe and see who you get at our random char page.">
+  <title>Rick and Morty Catalog | Quick Wiki</title>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Rick and Morty</title>
 </head>
 <body>
   <header>
     <a href="." class="logo">
-      <img class="logo__image" src="./assets/images/RickAndMortyLogo.png" alt="rick and morty logo">
+      <img class="logo__image" src="./assets/images/RickAndMortyLogo.png" alt="Rick and Morty">
       <h1 class="logo__title" >Rick & Morty Catalog</h1>
     </a>
     <nav>
@@ -26,7 +27,7 @@
   </header>
   <main>
     <div class="container">
-      <div class="search-container">
+      <header class="search-container">
         <div class="input-container"> 
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Filter by name">
@@ -34,7 +35,7 @@
         <div class="wrapper">
           <div class="select-container">
             <input type="checkbox">
-            <span class="selected-value">Specie</span>
+            <p class="selected-value" id="selected-specie">Specie</p>
             <div class="chevrons">
               <i class="fa-solid fa-chevron-up"></i>
               <i class="fa-solid fa-chevron-down"></i>
@@ -49,7 +50,7 @@
                 value="alien"
                 data-label="Alien"
               >
-              <span>Alien</span>
+              <p>Alien</p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -59,7 +60,7 @@
                 value="animal"
                 data-label="Animal"
               >
-              <span>Animal</span>
+              <p>Animal</p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -69,8 +70,8 @@
                 value="cronenberg"
                 data-label="Cronenberg"
               >
-              <span>Cronenberg
-              </span>
+              <p>Cronenberg
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -80,8 +81,8 @@
                 value="disease"
                 data-label="Disease"
               >
-              <span>Disease
-              </span>
+              <p>Disease
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -91,8 +92,8 @@
                 value="human"
                 data-label="Human"
               >
-              <span>Human
-              </span>
+              <p>Human
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -103,8 +104,8 @@
                 data-label="Humanoid
                 "
               >
-              <span>Humanoid
-              </span>
+              <p>Humanoid
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -114,8 +115,8 @@
                 value="mythical creature"
                 data-label="Mythical Creature"
               >
-              <span>Mythical Creature
-              </span>
+              <p>Mythical Creature
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -125,8 +126,8 @@
                 value="parasite"
                 data-label="Parasite"
               >
-              <span>Parasite
-              </span>
+              <p>Parasite
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -136,8 +137,8 @@
                 value="poopybutthole"
                 data-label="Poopybutthole"
               >
-              <span>Poopybutthole
-              </span>
+              <p>Poopybutthole
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -147,8 +148,8 @@
                 value="robot"
                 data-label="Robot"
               >
-              <span>Robot
-              </span>
+              <p>Robot
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -158,8 +159,8 @@
                 value="vampire"
                 data-label="Vampire"
               >
-              <span>Vampire
-              </span>
+              <p>Vampire
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -169,8 +170,8 @@
                 value="unknown"
                 data-label="Unknown"
               >
-              <span>Unknown
-              </span>
+              <p>Unknown
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
           </ul>
@@ -178,7 +179,7 @@
         <div class="wrapper">
           <div class="select-container">
             <input type="checkbox">
-            <span class="selected-value">Genre</span>
+            <p class="selected-value" id="selected-genre">Genre</p>
             <div class="chevrons">
               <i class="fa-solid fa-chevron-up"></i>
               <i class="fa-solid fa-chevron-down"></i>
@@ -193,7 +194,7 @@
                 value="male"
                 data-label="Male"
               >
-              <span>Male</span>
+              <p>Male</p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -203,7 +204,7 @@
                 value="female"
                 data-label="Female"
               >
-              <span>Female</span>
+              <p>Female</p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -213,8 +214,8 @@
                 value="genderless"
                 data-label="Genderless"
               >
-              <span>Genderless
-              </span>
+              <p>Genderless
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -224,8 +225,8 @@
                 value="unknown"
                 data-label="Unknown"
               >
-              <span>Unknown
-              </span>
+              <p>Unknown
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
           </ul>
@@ -233,7 +234,7 @@
         <div class="wrapper">
           <div class="select-container">
             <input type="checkbox">
-            <span class="selected-value">Genre</span>
+            <p class="selected-value" id="selected-status">Status</p>
             <div class="chevrons">
               <i class="fa-solid fa-chevron-up"></i>
               <i class="fa-solid fa-chevron-down"></i>
@@ -248,18 +249,18 @@
                 value="alive"
                 data-label="Alive"
               >
-              <span>Alive</span>
+              <p>Alive</p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
               <input 
                 type="radio"
                 name="category"
-                value="dead"
-                data-label="Dead"
+                value="<span>Unknown</span>"
+                data-label="<span>Unknown</span>"
               >
-              <span>Dead
-              </span>
+              <p><span>Unknown</span>
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="option">
@@ -269,19 +270,201 @@
                 value="unknown"
                 data-label="Unknown"
               >
-              <span>Unknown
-              </span>
+              <p>Unknown
+              </p>
               <i class="fa-solid fa-check"></i>
             </li>
           </ul>
+        </div>
+      </header>
+      <div class="cards-container">
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
+        </div>
+        <div class="card">
+          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
+          <div class="card__content">
+            <h4 class="character-name">Jesus Christ</h4>
+            <div class="character-info">
+              <div class="character-info__status">
+                <i class="fa-solid fa-circle"></i>
+                <p>Unknown</p>
+              </div>
+              <p class="character-info__specie">Human</p>
+              <p class="character-info__genre">Male</p>
+            </div>
+          </div>
+          <a class="see-details" href="#">see character details</a>
         </div>
       </div>
     </div>
   </main>
   <footer>
     <div class="atributtions">
-      <span>using <a target="_blank" href="https://rickandmortyapi.com/">The Rick and Morty API</a></span>
-      <span>made by <a target="_blank" href="https://github.com/gbcayres">Gabriel Cayres</a></span>
+      <p>using <a target="_blank" href="https://rickandmortyapi.com/">The Rick and Morty API</a></p>
+      <p>made by <a target="_blank" href="https://github.com/gbcayres">Gabriel Cayres</a></p>
     </div>
   </footer>
 </body>

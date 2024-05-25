@@ -1,0 +1,85 @@
+@use "../abstracts" as *;
+
+.card {
+  width: 100%;
+  max-width: 200px;
+  height:fit-content;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 1.2rem rgba($black, $alpha: 0.4);
+  overflow: hidden;
+  position: relative;
+  transition: $t-medium;
+
+  &__image {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+
+    .see-details {
+      cursor: pointer;
+      height: 100%;
+      visibility: visible;
+    }
+  }
+
+  .see-details {
+    background-color: #1d1d1d;
+    color: $white;
+    display: grid;
+    height: 0;
+    place-items: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: $t-short;
+    visibility: hidden;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem 0.5rem;
+    gap: 0.5rem;
+
+
+    .character-name {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+    
+
+    .character-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      &__status {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          font-size: 0.5rem;
+          color: yellow;
+        }
+      }
+
+      & > p {
+        width: fit-content;
+        border-radius: 1rem;
+        padding: 0.2rem 0.7rem;
+      }
+
+      & > p:nth-child(2) {
+        background-color: $green;
+      }
+
+      & > p:nth-child(3) {
+        background-color: $cyan;
+      }
+    }
+  }
+}

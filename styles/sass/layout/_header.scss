@@ -12,7 +12,7 @@ header {
     gap: 2rem;
 
     &__image {
-      transition: $short;
+      transition: $t-short;
       width: 80px;
 
       &:hover {
@@ -22,7 +22,7 @@ header {
 
     &__title {
       font-size: 38px;
-      transition: $short;
+      transition: $t-short;
       
       &:hover {
         text-shadow: -4px 0px 0 $cyan;
@@ -41,7 +41,7 @@ header {
     border-bottom: 2px solid transparent;
     color: $black; 
     font-weight: bold;
-    transition: $short;
+    transition: $t-short;
 
     &:hover,
     &.active {

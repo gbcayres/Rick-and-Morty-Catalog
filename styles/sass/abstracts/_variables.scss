@@ -7,9 +7,13 @@ $grey: #AFABB6;
 $light-grey: #dadada;
 
 // Transitions
-$short: 0.3s all;
-$medium: 0.5s all;
+$t-short: 0.3s all;
+$t-medium: 0.5s all;
 
 // Typography
 $letter-spacing: 0.02625rem;
 $placeholder-size: 0.875rem;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;

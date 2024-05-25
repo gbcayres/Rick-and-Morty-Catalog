@@ -8,13 +8,13 @@
 .select-container {
   align-items: center;
   background-color: $white;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 1px solid transparent;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   position: relative;
-  transition: $medium;
+  transition: $t-medium;
   width: 100%;
 
   input {
@@ -66,10 +66,11 @@
   border: 1px solid $cyan;
   border-radius: 1rem;
   position: absolute;
+  z-index: 1;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: $medium;
+  transition: $t-medium;
 }
 
 .option {
@@ -83,9 +84,9 @@
   font-size: 0.875rem;
   letter-spacing: 0.02625rem;
 
-  span {
+  p {
     color: $black;
-    transition: $short;
+    transition: $t-short;
   }
 
   &:not(:last-child) {
@@ -99,7 +100,7 @@
   }
 
   &:hover, &:has(input:focus) {
-    span {
+    p {
       color: $green;
       
     }
@@ -115,6 +116,6 @@
   i {
     display: none;
     color: $green;
-    transition: $short;
+    transition: $t-short;
   }
 }
