@@ -8,7 +8,20 @@
   box-shadow: 0 0.3rem 1.2rem rgba($black, $alpha: 0.4);
   overflow: hidden;
   position: relative;
-  transition: $t-medium;
+  transition: $t-short;
+
+  @include only-medium {
+    max-width: 230px;
+  }
+
+  @include only-small {
+    max-width: 270px;
+    font-size: 1.2rem;
+  }
+
+  @include only-phones {
+    max-width: 350px;
+  }
 
   &__image {
     width: 100%;
@@ -48,6 +61,10 @@
     .character-name {
       font-size: 1.1rem;
       text-transform: uppercase;
+
+      @include only-small {
+        font-size: 1.5rem;
+      }
     }
     
 

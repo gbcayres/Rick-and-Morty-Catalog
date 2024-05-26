@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.search-container {
+  @include flex-center;
+  padding: 1rem;
+  gap: 1rem;
+  height: 15%;
+  @include only-small {
+    flex-direction: column;
+    height: 25%;
+  }
+
+  &__filters {
+    @include flex-center;
+    width: 75%;
+    gap: 1rem;
+    justify-content: space-between;
+    @include only-small {
+      width: 90%;
+    }
+    @include only-phones {
+      width: 100%;
+      gap: 0.5rem;
+    }
+  }
+}

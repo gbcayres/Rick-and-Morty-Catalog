@@ -12,16 +12,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <header>
-    <a href="." class="logo">
-      <img class="logo__image" src="./assets/images/RickAndMortyLogo.png" alt="Rick and Morty">
-      <h1 class="logo__title" >Rick & Morty Catalog</h1>
+  <header class="page-header">
+    <a href="." class="header__logo">
+      <img class="header__logo-image" src="./assets/images/RickAndMortyLogo.png" alt="Rick and Morty">
+      <h1 class="header__logo-title" >Rick & Morty Catalog</h1>
     </a>
     <nav>
-      <ul class="nav">
-        <a class="nav__item active" href=".">Characters</a>
-        <a class="nav__item" href="./locations.html">Locations</a>
-        <a class="nav__item" href="./episodes.html">Episodes</a>
+      <ul class="header__nav">
+        <li>
+          <a class="header__nav-item header__nav-item--active" href=".">Characters</a>
+        </li>
+        <li>
+          <a class="header__nav-item" href="./locations.html">Locations</a>
+        </li>
+        <li>
+          <a class="header__nav-item" href="./episodes.html">Episodes</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__open-menu-button">
+      <input type="checkbox">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="overlay-menu">
+      <ul class="overlay-menu__nav">
+        <li class="overlay-menu__nav-item overlay-menu__nav-item--active">
+          <a href=".">Characters</a>
+        </li>
+        <li class="overlay-menu__nav-item">
+          <a href="./locations.html">Locations</a>
+        </li>
+        <li class="overlay-menu__nav-item">
+          <a href="./episodes.html">Episodes</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -32,249 +55,251 @@
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Filter by name">
         </div>
-        <div class="wrapper">
+        <div class="search-container__filters">
           <div class="select-container">
-            <input type="checkbox">
-            <p class="selected-value" id="selected-specie">Specie</p>
-            <div class="chevrons">
-              <i class="fa-solid fa-chevron-up"></i>
-              <i class="fa-solid fa-chevron-down"></i>
+            <div class="select-box">
+              <input type="checkbox">
+              <p class="selected-value" id="selected-specie">Specie</p>
+              <div class="chevrons">
+                <i class="fa-solid fa-chevron-up"></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
             </div>
+          
+            <ul class="options">
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="alien"
+                  data-label="Alien"
+                >
+                <p>Alien</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="animal"
+                  data-label="Animal"
+                >
+                <p>Animal</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="cronenberg"
+                  data-label="Cronenberg"
+                >
+                <p>Cronenberg
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="disease"
+                  data-label="Disease"
+                >
+                <p>Disease
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="human"
+                  data-label="Human"
+                >
+                <p>Human
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="humanoid"
+                  data-label="Humanoid
+                  "
+                >
+                <p>Humanoid
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="mythical creature"
+                  data-label="Mythical Creature"
+                >
+                <p>Mythical Creature
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="parasite"
+                  data-label="Parasite"
+                >
+                <p>Parasite
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="poopybutthole"
+                  data-label="Poopybutthole"
+                >
+                <p>Poopybutthole
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="robot"
+                  data-label="Robot"
+                >
+                <p>Robot
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="vampire"
+                  data-label="Vampire"
+                >
+                <p>Vampire
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="unknown"
+                  data-label="Unknown"
+                >
+                <p>Unknown
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+            </ul>
           </div>
-        
-          <ul class="options">
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="alien"
-                data-label="Alien"
-              >
-              <p>Alien</p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="animal"
-                data-label="Animal"
-              >
-              <p>Animal</p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="cronenberg"
-                data-label="Cronenberg"
-              >
-              <p>Cronenberg
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="disease"
-                data-label="Disease"
-              >
-              <p>Disease
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="human"
-                data-label="Human"
-              >
-              <p>Human
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="humanoid"
-                data-label="Humanoid
-                "
-              >
-              <p>Humanoid
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="mythical creature"
-                data-label="Mythical Creature"
-              >
-              <p>Mythical Creature
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="parasite"
-                data-label="Parasite"
-              >
-              <p>Parasite
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="poopybutthole"
-                data-label="Poopybutthole"
-              >
-              <p>Poopybutthole
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="robot"
-                data-label="Robot"
-              >
-              <p>Robot
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="vampire"
-                data-label="Vampire"
-              >
-              <p>Vampire
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="unknown"
-                data-label="Unknown"
-              >
-              <p>Unknown
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-          </ul>
-        </div>
-        <div class="wrapper">
           <div class="select-container">
-            <input type="checkbox">
-            <p class="selected-value" id="selected-genre">Genre</p>
-            <div class="chevrons">
-              <i class="fa-solid fa-chevron-up"></i>
-              <i class="fa-solid fa-chevron-down"></i>
+            <div class="select-box">
+              <input type="checkbox">
+              <p class="selected-value" id="selected-genre">Genre</p>
+              <div class="chevrons">
+                <i class="fa-solid fa-chevron-up"></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
             </div>
+          
+            <ul class="options">
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="male"
+                  data-label="Male"
+                >
+                <p>Male</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="female"
+                  data-label="Female"
+                >
+                <p>Female</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="genderless"
+                  data-label="Genderless"
+                >
+                <p>Genderless
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="unknown"
+                  data-label="Unknown"
+                >
+                <p>Unknown
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+            </ul>
           </div>
-        
-          <ul class="options">
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="male"
-                data-label="Male"
-              >
-              <p>Male</p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="female"
-                data-label="Female"
-              >
-              <p>Female</p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="genderless"
-                data-label="Genderless"
-              >
-              <p>Genderless
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="unknown"
-                data-label="Unknown"
-              >
-              <p>Unknown
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-          </ul>
-        </div>
-        <div class="wrapper">
           <div class="select-container">
-            <input type="checkbox">
-            <p class="selected-value" id="selected-status">Status</p>
-            <div class="chevrons">
-              <i class="fa-solid fa-chevron-up"></i>
-              <i class="fa-solid fa-chevron-down"></i>
+            <div class="select-box">
+              <input type="checkbox">
+              <p class="selected-value" id="selected-status">Status</p>
+              <div class="chevrons">
+                <i class="fa-solid fa-chevron-up"></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
             </div>
+          
+            <ul class="options">
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="alive"
+                  data-label="Alive"
+                >
+                <p>Alive</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="dead"
+                  data-label="Dead"
+                >
+                <p><span>Dead</span>
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="unknown"
+                  data-label="Unknown"
+                >
+                <p>Unknown
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+            </ul>
           </div>
-        
-          <ul class="options">
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="alive"
-                data-label="Alive"
-              >
-              <p>Alive</p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="<span>Unknown</span>"
-                data-label="<span>Unknown</span>"
-              >
-              <p><span>Unknown</span>
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-            <li class="option">
-              <input 
-                type="radio"
-                name="category"
-                value="unknown"
-                data-label="Unknown"
-              >
-              <p>Unknown
-              </p>
-              <i class="fa-solid fa-check"></i>
-            </li>
-          </ul>
         </div>
       </header>
       <div class="cards-container">

@@ -1,11 +1,11 @@
 @use "../abstracts" as *;
 
-.wrapper {
-  width: 20%;
+.select-container {
+  flex: 1;
   position: relative;
 }
 
-.select-container {
+.select-box {
   align-items: center;
   background-color: $white;
   border-radius: 0.5rem;
@@ -14,8 +14,11 @@
   justify-content: space-between;
   padding: 0.5rem;
   position: relative;
-  transition: $t-medium;
+  transition: $t-short;
   width: 100%;
+  @include only-small {
+    padding: 0.85rem;
+  }
 
   input {
     all: unset;
@@ -45,7 +48,12 @@
 
   &:has(input:checked) + .options {
     opacity: 1;
-    max-height: 500px
+    max-height: 500px;
+
+    @include only-small {
+      max-height: 350px;
+      overflow: auto;
+    }
   }
 }
 
@@ -53,6 +61,9 @@
   color: #AFABB6;
   font-size: 0.875rem;
   letter-spacing: 0.02625rem;
+  @include only-small {
+    font-size: 1.1rem;
+  }
 }
 
 .chevrons {
@@ -65,12 +76,13 @@
   background-color: $white;
   border: 1px solid $cyan;
   border-radius: 1rem;
+  box-shadow: 0 0.3rem 1rem rgba($black, $alpha: 0.4);
   position: absolute;
   z-index: 1;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: $t-medium;
+  transition: $t-short;
 }
 
 .option {
@@ -83,6 +95,9 @@
   transition: 0.3s all;
   font-size: 0.875rem;
   letter-spacing: 0.02625rem;
+  @include only-small {
+    font-size: 1.1rem;
+  }
 
   p {
     color: $black;
@@ -102,7 +117,6 @@
   &:hover, &:has(input:focus) {
     p {
       color: $green;
-      
     }
   }
 

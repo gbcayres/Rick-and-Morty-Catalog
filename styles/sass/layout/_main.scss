@@ -2,10 +2,12 @@
 
 main {
   @include flex-center;
-  background-image: url("../../../assets/images/rickandmortybackground.jpg");
+  background-image: url("../assets/images/rickandmortybackground.jpg");
   background-position: center;
   background-repeat: no-repeat;
   height: 85%;
+  padding: 0 1rem;
+
 }
 
 .container {
@@ -23,11 +25,15 @@ main {
 .cards-container {
   background-color: $white;
   overflow: auto;
-  height: 85%;
-  padding: 1rem;
+  height:85%;
+  padding: 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  @include only-small {
+    height: 75%;
+  }
   
   &::-webkit-scrollbar {
     width: 0.4rem;
