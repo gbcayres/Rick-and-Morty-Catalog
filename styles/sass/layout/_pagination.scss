@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.pagination {
+  background: $white;
+  gap: 2rem;
+  height: 8%;
+  width: 100%;
+  @include flex-center;
+  
+  button {
+    cursor: pointer;
+    transition: $t-short;
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: $green;
+    }
+
+    i {
+      font-size: 1.5rem;
+      transition: $t-short;
+      @include only-small {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__back {
+    &:hover {
+      transform: translateX(-5px);
+    }
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__next {
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  &__page {
+    font-size: 1.5rem;
+  }
+}

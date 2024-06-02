@@ -33,6 +33,10 @@ body {
 
 body {
   width: 100%;
+  * {
+    font-size: 1.1rem;
+  }
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -48,3 +52,7 @@ a {
   color: black;
 }
 
+::selection {
+  background-color: $purple;
+  color: $cyan ;
+}

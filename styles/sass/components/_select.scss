@@ -1,18 +1,19 @@
 @use "../abstracts" as *;
 
 .select-container {
-  flex: 1;
+  width: 33%;
   position: relative;
 }
 
 .select-box {
   align-items: center;
   background-color: $white;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   border: 1px solid transparent;
   display: flex;
+  gap: 0.5rem;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.85rem;
   position: relative;
   transition: $t-short;
   width: 100%;
@@ -58,16 +59,15 @@
 }
 
 .selected-value {
+  width: 100%;
+  overflow: hidden;
   color: #AFABB6;
-  font-size: 0.875rem;
   letter-spacing: 0.02625rem;
-  @include only-small {
-    font-size: 1.1rem;
-  }
+  white-space: nowrap;
 }
 
 .chevrons {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   color: $grey;
 }
 
@@ -93,10 +93,9 @@
   width: 180px;
   position: relative;
   transition: 0.3s all;
-  font-size: 0.875rem;
   letter-spacing: 0.02625rem;
   @include only-small {
-    font-size: 1.1rem;
+
   }
 
   p {

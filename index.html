@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./assets/images/redLogo.png">
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="script" defer href="./js/main.js">
+  <script type="module" src="./js/main.js" defer></script>
   <meta name="description" content="You can find every character detail, location, episodes and more about Rick and Morty universe and see who you get at our random char page.">
   <title>Rick and Morty Catalog | Quick Wiki</title>
   <!-- Font Awesome Icons -->
@@ -45,6 +45,9 @@
         <li class="overlay-menu__nav-item">
           <a href="./episodes.html">Episodes</a>
         </li>
+        <li class="overlay-menu__nav-item">
+          <button id="close-overlay-menu" class=overlay-menu__nav-item><i class="fa fa-times" aria-hidden="true"></i></button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -53,7 +56,7 @@
       <header class="search-container">
         <div class="input-container"> 
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Filter by name">
+          <input id="nameSearch" type="text" placeholder="Filter by name" autocomplete="off">
         </div>
         <div class="search-container__filters">
           <div class="select-container">
@@ -67,6 +70,16 @@
             </div>
           
             <ul class="options">
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="any"
+                  data-label="Any"
+                >
+                <p>Any</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
               <li class="option">
                 <input 
                   type="radio"
@@ -136,28 +149,6 @@
                 <input 
                   type="radio"
                   name="category"
-                  value="mythical creature"
-                  data-label="Mythical Creature"
-                >
-                <p>Mythical Creature
-                </p>
-                <i class="fa-solid fa-check"></i>
-              </li>
-              <li class="option">
-                <input 
-                  type="radio"
-                  name="category"
-                  value="parasite"
-                  data-label="Parasite"
-                >
-                <p>Parasite
-                </p>
-                <i class="fa-solid fa-check"></i>
-              </li>
-              <li class="option">
-                <input 
-                  type="radio"
-                  name="category"
                   value="poopybutthole"
                   data-label="Poopybutthole"
                 >
@@ -180,10 +171,10 @@
                 <input 
                   type="radio"
                   name="category"
-                  value="vampire"
-                  data-label="Vampire"
+                  value="mythological creature"
+                  data-label="Mythological Creature"
                 >
-                <p>Vampire
+                <p>Mythological Creature
                 </p>
                 <i class="fa-solid fa-check"></i>
               </li>
@@ -203,7 +194,7 @@
           <div class="select-container">
             <div class="select-box">
               <input type="checkbox">
-              <p class="selected-value" id="selected-genre">Genre</p>
+              <p class="selected-value" id="selected-genre">Gender</p>
               <div class="chevrons">
                 <i class="fa-solid fa-chevron-up"></i>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -211,6 +202,16 @@
             </div>
           
             <ul class="options">
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
+                  value="any"
+                  data-label="Any"
+                >
+                <p>Any</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
               <li class="option">
                 <input 
                   type="radio"
@@ -270,6 +271,16 @@
                 <input 
                   type="radio"
                   name="category"
+                  value="any"
+                  data-label="Any"
+                >
+                <p>Any</p>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="option">
+                <input 
+                  type="radio"
+                  name="category"
                   value="alive"
                   data-label="Alive"
                 >
@@ -303,186 +314,12 @@
         </div>
       </header>
       <div class="cards-container">
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
-        <div class="card">
-          <img class="card__image" src="https://rickandmortyapi.com/api/character/avatar/608.jpeg" alt="jesus christ">
-          <div class="card__content">
-            <h4 class="character-name">Jesus Christ</h4>
-            <div class="character-info">
-              <div class="character-info__status">
-                <i class="fa-solid fa-circle"></i>
-                <p>Unknown</p>
-              </div>
-              <p class="character-info__specie">Human</p>
-              <p class="character-info__genre">Male</p>
-            </div>
-          </div>
-          <a class="see-details" href="#">see character details</a>
-        </div>
+        <!-- dinamic cards -->
+      </div>
+      <div class="pagination">
+        <button class="pagination__back"><i class="fa-solid fa-backward"></i></button>
+        <span class="pagination__page">1</span>
+        <button class="pagination__next"><i class="fa-solid fa-forward"></i></button>
       </div>
     </div>
   </main>

@@ -7,7 +7,7 @@
   padding: 2rem 4rem;
   width: 100%;
 
-  @include only-phones {
+  @include only-small {
     padding: 1.5rem
   }
 
@@ -17,19 +17,15 @@
 
     &-image {
       transition: $t-short;
-      width: 80px;
-
+      width: 100px;
+      
       &:hover {
         transform: scale(1.1);
-      }
-
-      @include only-phones {
-        width: 100px;
       }
     }
 
     &-title {
-      font-size: 38px;
+      font-size: 2.8rem;
       transition: $t-short;
       
       &:hover {
@@ -37,6 +33,10 @@
         transform: translateX(5px);
       }
 
+      @include only-small {
+        font-size: 2.5rem;
+      }
+    
       @include only-phones {
         display: none;
       }
@@ -53,6 +53,7 @@
   
     
     &-item {
+      font-size: 1.3rem;
       border-bottom: 2px solid transparent;
       color: $black; 
       font-weight: bold;
